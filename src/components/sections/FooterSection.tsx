@@ -42,7 +42,7 @@ const FooterSection = () => {
                     className="flex items-center gap-3 text-foreground-light/70 hover:text-primary transition-colors text-sm"
                   >
                     <Instagram className="w-4 h-4 text-primary" />
-                    @clinica
+                    @dr.victorfolster
                   </a>
                 )}
               </div>
@@ -66,8 +66,11 @@ const FooterSection = () => {
             </div>
           </div>
 
-          {/* Copyright */}
-          <div className="border-t border-foreground-light/10 pt-8 text-center">
+          {/* Institutional Message */}
+          <div className="border-t border-foreground-light/10 pt-8 text-center space-y-3">
+            <p className="text-foreground-light/60 text-sm">
+              Estética com base clínica, planejamento e responsabilidade profissional.
+            </p>
             <p className="text-foreground-light/40 text-xs">
               © {new Date().getFullYear()} {siteConfig.professional.name}. Todos os direitos reservados.
             </p>
