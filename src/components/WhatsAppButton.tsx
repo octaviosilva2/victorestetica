@@ -3,10 +3,7 @@ import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
   const handleWhatsApp = () => {
-    window.open(
-      `https://wa.me/${siteConfig.contact.whatsapp}?text=Olá! Gostaria de agendar uma consulta.`,
-      "_blank"
-    );
+    window.open(siteConfig.links.whatsappUrl, "_blank");
   };
 
   return (

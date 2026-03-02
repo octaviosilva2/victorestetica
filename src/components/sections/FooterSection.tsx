@@ -22,7 +22,7 @@ const FooterSection = () => {
                   <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                   <div>
                     <p>{siteConfig.contact.address}</p>
-                    <p>{siteConfig.contact.city}</p>
+                    <p>{siteConfig.contact.city}, {siteConfig.contact.cep}</p>
                   </div>
                 </div>
 
