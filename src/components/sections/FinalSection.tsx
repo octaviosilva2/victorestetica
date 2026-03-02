@@ -79,8 +79,11 @@ const FinalSection = () => {
           <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground mb-4">
             {siteConfig.cta.finalTitle}
           </h3>
-          <p className="text-foreground-muted text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-foreground-muted text-lg mb-4 max-w-2xl mx-auto">
             {siteConfig.cta.finalSubtitle}
+          </p>
+          <p className="text-foreground-muted text-sm mb-8">
+            Atendimentos em Jaraguá do Sul e Florianópolis.
           </p>
           <Button
             onClick={handleWhatsApp}
@@ -88,7 +91,7 @@ const FinalSection = () => {
             className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium tracking-wide transition-all duration-300 hover:scale-105 gap-3"
           >
             <MessageCircle className="w-5 h-5" />
-            Agendar Atendimento
+            {siteConfig.cta.finalButton}
           </Button>
         </FadeInUp>
       </div>

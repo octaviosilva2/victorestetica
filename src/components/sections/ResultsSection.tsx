@@ -1,5 +1,5 @@
 import { FadeIn, FadeInUp } from "@/hooks/useScrollAnimation";
-import botoxResult from "@/assets/botox-result.png";
+import { Camera } from "lucide-react";
 
 const ResultsSection = () => {
   return (
@@ -8,30 +8,27 @@ const ResultsSection = () => {
         {/* Title */}
         <FadeIn className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-            Resultados Reais de Pacientes
+            Resultados reais. Elegância sem exageros.
           </h2>
           <p className="text-foreground-muted max-w-xl mx-auto mb-6">
-            Transformações reais que falam por si. Cada resultado é único e personalizado.
+            A prioridade não é transformar, é harmonizar.
+            Resultados progressivos, seguros e compatíveis com sua estrutura.
           </p>
           <div className="w-20 h-0.5 bg-primary mx-auto" />
         </FadeIn>
 
-        {/* Result Image */}
+        {/* Placeholder for future photos */}
         <FadeInUp delay={100}>
-          <div className="flex justify-center">
-            <div className="relative overflow-hidden rounded-2xl max-w-xs shadow-lg">
-              <img
-                src={botoxResult}
-                alt="Resultado de Botox - Antes e Depois"
-                className="w-full h-auto object-cover"
-              />
-              {/* Botox Badge */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-primary/90 backdrop-blur-sm px-4 py-1.5 rounded-full">
-                <span className="text-primary-foreground font-medium text-sm tracking-wide">
-                  Botox
-                </span>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="aspect-[3/4] rounded-2xl bg-background-subtle border border-border/50 flex flex-col items-center justify-center text-foreground-muted"
+              >
+                <Camera className="w-8 h-8 mb-3 opacity-40" />
+                <span className="text-sm opacity-60">Em breve</span>
               </div>
-            </div>
+            ))}
           </div>
         </FadeInUp>
       </div>

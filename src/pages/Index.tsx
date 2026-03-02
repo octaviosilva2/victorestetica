@@ -1,5 +1,6 @@
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
+import MethodSection from "@/components/sections/MethodSection";
 import ProceduresSection from "@/components/sections/ProceduresSection";
 import ResultsSection from "@/components/sections/ResultsSection";
 import FinalSection from "@/components/sections/FinalSection";
@@ -11,6 +12,7 @@ const Index = () => {
     <main className="overflow-x-hidden">
       <HeroSection />
       <AboutSection />
+      <MethodSection />
       <ProceduresSection />
       <ResultsSection />
       <FinalSection />

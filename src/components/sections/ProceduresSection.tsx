@@ -8,7 +8,7 @@ const ProceduresSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   // Use fewer procedures for cleaner look
-  const mainProcedures = siteConfig.procedures.slice(0, 8);
+  const mainProcedures = siteConfig.procedures;
 
   // Split into 2 columns
   const midpoint = Math.ceil(mainProcedures.length / 2);
@@ -50,8 +50,8 @@ const ProceduresSection = () => {
 
         {isExpanded && (
           <div className="pb-4 pl-6 animate-fade-in">
-            <p className="text-foreground-muted text-sm mb-3">
-              Procedimento realizado com técnicas modernas e seguras, garantindo resultados naturais e harmoniosos.
+            <p className="text-foreground-muted text-sm mb-3 whitespace-pre-line">
+              {siteConfig.procedureDetails?.[procedure] || "Procedimento realizado com técnicas modernas e seguras, garantindo resultados naturais e harmoniosos."}
             </p>
             <Button
               onClick={() => handleWhatsApp(procedure)}
@@ -75,6 +75,9 @@ const ProceduresSection = () => {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
             Procedimentos
           </h2>
+          <p className="text-foreground-muted max-w-xl mx-auto mb-6">
+            Cada procedimento é indicado após avaliação criteriosa, respeitando a fisiologia da pele e a identidade facial.
+          </p>
           <div className="w-20 h-0.5 bg-primary mx-auto" />
         </FadeIn>
 
