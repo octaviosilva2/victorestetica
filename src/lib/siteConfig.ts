@@ -96,10 +96,17 @@ export const siteConfig = {
     phone: "(48) 98814-9023",
     whatsapp: "5548988149023",
     email: "contato@clinica.com.br",
-    address: "Rua Henrique Spengler, 90 – Vila Nova",
+    address: "R. Henrique Spengler, 90 – Vila Nova",
     city: "Jaraguá do Sul – SC",
     cep: "89259-280",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.5!2d-49.0714!3d-26.4864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua+Henrique+Spengler%2C+90+-+Vila+Nova%2C+Jaragu%C3%A1+do+Sul+-+SC!5e0!3m2!1spt-BR!2sbr",
+    clinicName: "Instituto Gaya - Jaraguá do Sul",
+  },
+
+  // Links
+  links: {
+    whatsappUrl: "https://wa.me/5548988149023?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação%20com%20o%20Dr.%20Victor%20Folster.",
+    mapUrl: "https://www.google.com/maps?q=R.+Henrique+Spengler,+90+-+Vila+Nova,+Jaragu%C3%A1+do+Sul+-+SC,+89259-280",
   },
 
   // Redes Sociais

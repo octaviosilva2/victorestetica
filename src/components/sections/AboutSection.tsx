@@ -1,77 +1,37 @@
 import { siteConfig } from "@/lib/siteConfig";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Users, Clock, ThumbsUp } from "lucide-react";
+import { CheckCircle, ImageIcon } from "lucide-react";
 import { FadeIn, FadeInUp } from "@/hooks/useScrollAnimation";
-import professionalImg from "@/assets/professional-portrait.jpg";
 
 const AboutSection = () => {
   const handleWhatsApp = () => {
-    window.open(
-      `https://wa.me/${siteConfig.contact.whatsapp}?text=Olá! Gostaria de agendar uma consulta.`,
-      "_blank"
-    );
+    window.open(siteConfig.links.whatsappUrl, "_blank");
   };
-
-  const stats = [
-    {
-      icon: Users,
-      value: `+${siteConfig.professional.patientsServed}`,
-      label: "Pacientes atendidos",
-    },
-    {
-      icon: Clock,
-      value: siteConfig.professional.yearsExperience,
-      label: "Anos de experiência",
-    },
-    {
-      icon: ThumbsUp,
-      value: `${siteConfig.professional.satisfactionRate}%`,
-      label: "Satisfação",
-    },
-  ];
 
   return (
     <section id="sobre" className="section-padding bg-background">
       <div className="container-narrow">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Left Column - Image + Stats */}
-          <FadeIn className="space-y-8">
-            {/* Image */}
-            <div className="aspect-[3/4] overflow-hidden rounded-2xl bg-background-subtle">
-              <img
-                src={professionalImg}
-                alt={siteConfig.professional.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Stats below the image */}
-            <div className="grid grid-cols-3 gap-4">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center p-4 rounded-xl bg-background-subtle"
-                >
-                  <stat.icon className="w-5 h-5 text-primary mx-auto mb-2" />
-                  <div className="font-serif text-2xl md:text-3xl text-foreground font-medium">
-                    {stat.value}
-                  </div>
-                  <div className="text-foreground-muted text-xs mt-1">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+          {/* Left Column - Image Placeholder */}
+          <FadeIn>
+            <div className="aspect-[3/4] overflow-hidden rounded-2xl bg-background-subtle border border-border/30 flex flex-col items-center justify-center">
+              <ImageIcon className="w-10 h-10 text-foreground-muted/40 mb-3" />
+              <span className="text-foreground-muted/50 text-sm">Imagem do profissional (em breve)</span>
             </div>
           </FadeIn>
 
           {/* Right Column - Content */}
           <FadeInUp delay={200} className="flex flex-col justify-center">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-2">
               {siteConfig.about.title}
             </h2>
 
+            <p className="text-primary text-sm tracking-wider mb-6">
+              {siteConfig.professional.credentials}
+            </p>
+
             <p className="text-foreground-muted text-lg leading-relaxed mb-8">
-              {siteConfig.about.description}
+              Especialista em <strong>Farmácia Estética e Clínica</strong>, com sólida experiência na integração entre conhecimento científico e prática estética avançada, dedicado a potencializar a beleza natural de cada paciente por meio de protocolos personalizados, seguros e com resultados harmoniosos e realistas.
             </p>
 
             {/* Highlights */}
