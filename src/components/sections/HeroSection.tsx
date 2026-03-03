@@ -1,6 +1,6 @@
 import { siteConfig } from "@/lib/siteConfig";
 import { Button } from "@/components/ui/button";
-import clinicReception from "@/assets/clinic-reception.jpg";
+import clinicReception from "@/assets/clinic-reception-new.png";
 
 const HeroSection = () => {
   const handleWhatsApp = () => {
@@ -19,7 +19,7 @@ const HeroSection = () => {
       />
       
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+      <div className="absolute inset-0 bg-black/35" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 animate-fade-in-up">
