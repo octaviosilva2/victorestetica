@@ -33,11 +33,6 @@ const HeroSection = () => {
           {siteConfig.professional.name}
         </h1>
 
-        {/* Credentials */}
-        <p className="text-white/70 text-sm md:text-base mb-6 tracking-widest uppercase">
-          {siteConfig.professional.credentials}
-        </p>
-
         {/* Support Text */}
         <p className="text-white/60 text-sm md:text-base max-w-xl mx-auto mb-10 md:mb-12 leading-relaxed">
           Protocolos personalizados que unem ciência, precisão e naturalidade para resultados elegantes e progressivos.

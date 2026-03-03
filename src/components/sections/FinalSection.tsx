@@ -11,18 +11,37 @@ const FinalSection = () => {
   return (
     <section id="clinica" className="section-padding bg-background-subtle">
       <div className="container-narrow">
-        {/* Title */}
-        <FadeIn className="text-center mb-12">
+        {/* Title + Subtitle */}
+        <FadeIn className="text-center mb-10">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-            Nossa Clínica
+            {siteConfig.cta.finalTitle}
           </h2>
-          <div className="w-20 h-0.5 bg-primary mx-auto" />
+          <p className="text-foreground-muted text-lg max-w-2xl mx-auto">
+            {siteConfig.cta.finalSubtitle}
+          </p>
         </FadeIn>
 
-        {/* Gallery placeholders + Map */}
+        {/* Institutional address block */}
+        <FadeInUp delay={100} className="text-center mb-12 space-y-2">
+          <p className="font-serif text-xl text-foreground font-medium">
+            {siteConfig.contact.clinicName}
+          </p>
+          <div className="flex items-start justify-center gap-2 text-foreground-muted text-sm">
+            <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+            <div className="text-left">
+              <p>{siteConfig.contact.address}</p>
+              <p>{siteConfig.contact.city}, {siteConfig.contact.cep}</p>
+            </div>
+          </div>
+          <p className="text-foreground-muted text-sm pt-1">
+            Atendo também em Florianópolis.
+          </p>
+        </FadeInUp>
+
+        {/* Gallery + Map */}
         <div className="grid lg:grid-cols-2 gap-8 mb-10">
           {/* Gallery Placeholders */}
-          <FadeInUp delay={100}>
+          <FadeInUp delay={150}>
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-2">
                 <div className="overflow-hidden rounded-2xl aspect-video bg-background border border-border/30 flex flex-col items-center justify-center">
@@ -56,25 +75,8 @@ const FinalSection = () => {
           </FadeInUp>
         </div>
 
-        {/* Clinic info + Address Google-style */}
-        <FadeInUp delay={250} className="text-center mb-10 space-y-2">
-          <p className="font-serif text-xl text-foreground font-medium">
-            {siteConfig.contact.clinicName}
-          </p>
-          <div className="flex items-start justify-center gap-2 text-foreground-muted text-sm">
-            <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-            <div className="text-left">
-              <p>{siteConfig.contact.address}</p>
-              <p>{siteConfig.contact.city}, {siteConfig.contact.cep}</p>
-            </div>
-          </div>
-          <p className="text-foreground-muted text-sm pt-1">
-            Atendo também em Florianópolis.
-          </p>
-        </FadeInUp>
-
-        {/* Buttons */}
-        <FadeInUp delay={280} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        {/* Action buttons */}
+        <FadeInUp delay={250} className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             asChild
             variant="outline"
@@ -86,24 +88,6 @@ const FinalSection = () => {
               Ver no mapa
             </a>
           </Button>
-          <Button
-            onClick={handleWhatsApp}
-            size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium tracking-wide transition-all duration-300 hover:scale-105 gap-3"
-          >
-            <MessageCircle className="w-5 h-5" />
-            {siteConfig.cta.finalButton}
-          </Button>
-        </FadeInUp>
-
-        {/* CTA */}
-        <FadeInUp delay={300} className="text-center py-8 border-t border-border/30">
-          <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground mb-4">
-            {siteConfig.cta.finalTitle}
-          </h3>
-          <p className="text-foreground-muted text-lg mb-8 max-w-2xl mx-auto">
-            {siteConfig.cta.finalSubtitle}
-          </p>
           <Button
             onClick={handleWhatsApp}
             size="lg"
