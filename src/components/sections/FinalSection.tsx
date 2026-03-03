@@ -18,7 +18,7 @@ const FinalSection = () => {
               {siteConfig.cta.finalTitle}
             </h2>
             <div className="w-14 h-px bg-primary/60 mx-auto mb-6" />
-            <p className="text-foreground-muted text-base md:text-lg max-w-xl mx-auto mb-8">
+            <p className="text-foreground-muted text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
               {siteConfig.cta.finalSubtitle}
             </p>
             <Button
@@ -34,24 +34,19 @@ const FinalSection = () => {
       </div>
 
       {/* BLOCO 2 — Institucional */}
-      <div className="section-padding bg-background-subtle/60">
+      <div className="section-padding bg-background-subtle/60 pb-24 sm:pb-16">
         <div className="container-narrow">
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
-            {/* Coluna esquerda — Imagem + Endereço */}
+          {/* Mobile: stacked order; Desktop: 2 cols */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+            {/* Coluna esquerda — Endereço (mobile first) + Imagem */}
             <FadeInUp delay={100}>
-              <div className="space-y-6">
-                {/* Imagem da clínica */}
-                <div className="overflow-hidden rounded-2xl aspect-[16/10] bg-background border border-border/30 flex flex-col items-center justify-center">
-                  <Camera className="w-8 h-8 text-foreground-muted/40 mb-2" />
-                  <span className="text-foreground-muted/50 text-sm">Foto da clínica (em breve)</span>
-                </div>
-
-                {/* Endereço */}
-                <div className="space-y-1.5">
+              <div className="space-y-5">
+                {/* Endereço — shown first on mobile via order */}
+                <div className="space-y-1.5 order-first">
                   <p className="font-serif text-lg text-foreground font-medium">
                     {siteConfig.contact.clinicName}
                   </p>
-                  <div className="flex items-start gap-2 text-foreground-muted text-sm">
+                  <div className="flex items-start gap-2 text-foreground-muted text-sm leading-relaxed">
                     <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <p>{siteConfig.contact.address}</p>
@@ -62,35 +57,60 @@ const FinalSection = () => {
                     Atendo também em Florianópolis.
                   </p>
                 </div>
+
+                {/* Botão ver no mapa — mobile only, below address */}
+                <div className="lg:hidden">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    size="sm"
+                    className="text-xs text-foreground-muted hover:text-primary gap-1.5 px-1"
+                  >
+                    <a href={siteConfig.links.mapUrl} target="_blank" rel="noopener noreferrer">
+                      <MapPin className="w-3.5 h-3.5" />
+                      Ver no mapa
+                    </a>
+                  </Button>
+                </div>
+
+                {/* Imagem da clínica */}
+                <div className="overflow-hidden rounded-2xl h-[180px] sm:h-auto sm:aspect-[16/10] bg-background border border-border/30 flex flex-col items-center justify-center">
+                  <Camera className="w-8 h-8 text-foreground-muted/40 mb-2" />
+                  <span className="text-foreground-muted/50 text-sm">Foto da clínica (em breve)</span>
+                </div>
               </div>
             </FadeInUp>
 
-            {/* Coluna direita — Mapa + botão */}
+            {/* Coluna direita — Mapa */}
             <FadeInUp delay={200}>
               <div className="space-y-3">
-                <div className="rounded-2xl overflow-hidden aspect-[16/10] min-h-[280px]">
+                <div className="rounded-2xl overflow-hidden h-[230px] sm:h-[280px] lg:aspect-[16/10] lg:h-auto lg:min-h-[280px]">
                   <iframe
                     src={siteConfig.contact.mapEmbedUrl}
                     width="100%"
                     height="100%"
-                    style={{ border: 0, minHeight: "280px" }}
+                    style={{ border: 0 }}
+                    className="h-full w-full"
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Localização da Clínica"
                   />
                 </div>
-                <Button
-                  asChild
-                  variant="ghost"
-                  size="sm"
-                  className="text-xs text-foreground-muted hover:text-primary gap-1.5 px-2"
-                >
-                  <a href={siteConfig.links.mapUrl} target="_blank" rel="noopener noreferrer">
-                    <MapPin className="w-3.5 h-3.5" />
-                    Ver no mapa
-                  </a>
-                </Button>
+                {/* Ver no mapa — desktop only */}
+                <div className="hidden lg:block">
+                  <Button
+                    asChild
+                    variant="ghost"
+                    size="sm"
+                    className="text-xs text-foreground-muted hover:text-primary gap-1.5 px-2"
+                  >
+                    <a href={siteConfig.links.mapUrl} target="_blank" rel="noopener noreferrer">
+                      <MapPin className="w-3.5 h-3.5" />
+                      Ver no mapa
+                    </a>
+                  </Button>
+                </div>
               </div>
             </FadeInUp>
           </div>
