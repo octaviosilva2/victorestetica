@@ -19,7 +19,7 @@ const HeroSection = () => {
       />
       
       {/* Dark Overlay — stronger on mobile */}
-      <div className="absolute inset-0 bg-black/[0.45] sm:bg-black/35" />
+      <div className="absolute inset-0 bg-black/[0.35] sm:bg-black/30" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 animate-fade-in-up max-w-[320px] sm:max-w-none mx-auto flex flex-col items-center">
@@ -34,7 +34,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Support Text */}
-        <p className="text-white/60 text-[0.875rem] sm:text-sm md:text-base max-w-[300px] sm:max-w-xl mx-auto mb-10 md:mb-12 leading-[1.55] sm:leading-relaxed">
+        <p className="text-white/60 text-[0.875rem] sm:text-sm md:text-base max-w-[300px] sm:max-w-xl mx-auto mb-6 md:mb-8 leading-[1.55] sm:leading-relaxed">
           Protocolos personalizados que unem ciência, precisão e naturalidade para resultados elegantes e progressivos.
         </p>
 

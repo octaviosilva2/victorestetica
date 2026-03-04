@@ -49,7 +49,7 @@ const FinalSection = () => {
               </div>
             </div>
             <p className="text-foreground-muted/60 text-xs pt-2">
-              Atendo também em Florianópolis.
+              Atendimento em Florianópolis mediante agendamento.
             </p>
           </FadeInUp>
 
