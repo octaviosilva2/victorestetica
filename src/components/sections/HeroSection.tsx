@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[92vh] sm:min-h-[600px] h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-no-repeat scale-105 bg-center max-sm:bg-[center_35%]"
@@ -22,19 +22,19 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/[0.45] sm:bg-black/35" />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 animate-fade-in-up max-w-[320px] sm:max-w-none mx-auto">
+      <div className="relative z-10 text-center px-6 animate-fade-in-up max-w-[320px] sm:max-w-none mx-auto flex flex-col items-center">
         {/* Specialty Badge */}
-        <span className="inline-block text-primary text-xs md:text-sm font-medium tracking-[0.4em] uppercase mb-6 md:mb-8">
+        <span className="inline-block text-primary text-[0.65rem] sm:text-xs md:text-sm font-medium tracking-[0.35em] sm:tracking-[0.4em] uppercase mb-8 sm:mb-6 md:mb-8">
           {siteConfig.professional.specialty}
         </span>
 
         {/* Name */}
-        <h1 className="font-serif text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-medium mb-4 md:mb-6 leading-[1.12] sm:leading-[1.1] tracking-tight">
+        <h1 className="font-serif text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-medium mb-5 sm:mb-4 md:mb-6 leading-[1.1] sm:leading-[1.1] tracking-tight">
           {siteConfig.professional.name}
         </h1>
 
         {/* Support Text */}
-        <p className="text-white/60 text-sm md:text-base max-w-xl mx-auto mb-10 md:mb-12 leading-[1.55] sm:leading-relaxed">
+        <p className="text-white/60 text-[0.875rem] sm:text-sm md:text-base max-w-[300px] sm:max-w-xl mx-auto mb-10 md:mb-12 leading-[1.55] sm:leading-relaxed">
           Protocolos personalizados que unem ciência, precisão e naturalidade para resultados elegantes e progressivos.
         </p>
 
