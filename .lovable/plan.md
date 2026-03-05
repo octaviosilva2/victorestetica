@@ -1,47 +1,87 @@
 
 
-## Plan: Visual Identity Update (Colors + Typography)
+# Atualização Completa de Conteúdo Textual
 
-### Summary
-Update the site's color palette from champagne gold to the brand's green (#6D7C71) and swap typography from Playfair Display to LUXERIE for headings, while keeping Inter for body text. No structural or layout changes.
+Substituição de todos os textos do site para o Dr. Victor Folster, sem alterar layout, imagens, cores ou fontes. As mudanças se concentram em **2 arquivos principais** + ajustes em **3 componentes de seção**.
 
-### Technical Changes
+---
 
-**1. Typography — Load LUXERIE font**
+## 1. Atualizar `src/lib/siteConfig.ts`
 
-In `src/index.css`, replace the Google Fonts import for Playfair Display with a CDNFonts import for LUXERIE:
+Substituir todos os dados do objeto `siteConfig`:
+
+- **professional**: nome "Dr. Victor Folster", specialty "Estética Avançada com Base Clínica", credentials "CRF/SC 18.551 | RQE 19028-49", manter números de stats
+- **about.title**: "Sobre o Profissional"
+- **about.description**: novo texto fornecido no PDR
+- **about.highlights**: 5 itens novos (Especialização em Estética Avançada..., Residência UFSC..., etc.)
+- **procedures**: lista de 10 procedimentos (Harmonização Facial, Toxina Botulínica, Preenchimento Labial, Rinomodelação, Bioestimulador de Colágeno, Protocolo Reset, Microagulhamento, Lipo de Papada Enzimática, Lipo Enzimática Corporal, Peeling Químico)
+- **contact**: phone "(48) 98814-9023", whatsapp "5548988149023", address "Rua Henrique Spengler, 90 – Vila Nova", city "Jaraguá do Sul – SC", cep "89259-280", atualizar mapEmbedUrl para novo endereço
+- **social.instagram**: "https://instagram.com/dr.victorfolster"
+- **cta**: heroButton "Agendar Avaliação", finalTitle "Sua melhor versão começa com um planejamento estratégico.", finalSubtitle "Agende sua avaliação personalizada e descubra o protocolo ideal para você.", finalButton "Agendar Avaliação"
+- **testimonials**: remover conteúdo (array vazio), pois seção de resultados será reformulada
+
+Adicionar novo campo para descrições detalhadas dos procedimentos (usado no accordion):
+
 ```
-@import url('https://fonts.cdnfonts.com/css/luxerie');
+procedureDetails: {
+  "Harmonização Facial": "Planejamento individualizado que equilibra proporções...",
+  ...
+}
 ```
-Keep Inter from Google Fonts. Update the heading font-family rule from `'Playfair Display'` to `'Luxerie'`.
 
-In `tailwind.config.ts`, update `fontFamily.serif` to `["Luxerie", "Georgia", "serif"]`.
+---
 
-**2. Color Palette — Update CSS variables**
+## 2. Atualizar `src/components/sections/HeroSection.tsx`
 
-In `src/index.css` `:root`, convert the brand colors to HSL and apply:
+- Adicionar texto de apoio abaixo das credentials: "Protocolos personalizados que unem ciência, precisão e naturalidade para resultados elegantes e progressivos."
+- Mudar o texto do botão para usar `siteConfig.cta.heroButton` (já faz isso, será atualizado via siteConfig)
 
-| Token | Current (gold) | New value |
-|---|---|---|
-| `--primary` | `36 45% 70%` | `144 7% 46%` (#6D7C71) |
-| `--accent` | `36 45% 70%` | `144 7% 46%` |
-| `--ring` | `36 45% 70%` | `144 7% 46%` |
-| `--background` | `0 0% 100%` | `0 0% 88%` (#E0E0E0) |
-| `--background-subtle` | `30 10% 97%` | `0 0% 92%` |
-| `--card` | `0 0% 100%` | `0 0% 93%` |
-| `--secondary` | `30 10% 95%` | `0 0% 90%` |
-| `--muted` | `30 10% 96%` | `0 0% 91%` |
-| `--border` | `30 15% 90%` | `0 0% 82%` |
-| `--input` | `30 15% 90%` | `0 0% 82%` |
+---
 
-Also update the `.dark` theme block with equivalent shifts.
+## 3. Atualizar `src/components/sections/ProceduresSection.tsx`
 
-Update the scrollbar thumb color (already uses `--primary`, so automatic).
+- Adicionar texto introdutório abaixo do título: "Cada procedimento é indicado após avaliação criteriosa..."
+- Usar `siteConfig.procedureDetails[procedure]` para descrição específica de cada item no accordion, em vez do texto genérico atual
 
-**3. Files to modify**
+---
 
-- `src/index.css` — Font import + CSS variables + heading font-family
-- `tailwind.config.ts` — Font family definition
+## 4. Atualizar `src/components/sections/ResultsSection.tsx`
 
-No component files need changes since they all reference CSS variables and Tailwind tokens.
+- Título: "Resultados reais. Elegância sem exageros."
+- Subtítulo: "A prioridade não é transformar, é harmonizar. Resultados progressivos, seguros e compatíveis com sua estrutura."
+- Remover a imagem de resultado e o badge "Botox"
+- Criar espaço reservado (placeholder) para futuras fotos de prova social, com texto indicativo
+
+---
+
+## 5. Atualizar `src/components/sections/FinalSection.tsx`
+
+- Adicionar texto complementar: "Atendimentos em Jaraguá do Sul e Florianópolis."
+- O botão CTA usará o texto "Agendar Avaliação" (via siteConfig)
+
+---
+
+## 6. Atualizar `src/components/sections/FooterSection.tsx`
+
+- Instagram: "@dr.victorfolster" com link correto
+- Adicionar mensagem institucional: "Estética com base clínica, planejamento e responsabilidade profissional."
+
+---
+
+## 7. Adicionar seção "Método / Posicionamento" (nova seção)
+
+Criar `src/components/sections/MethodSection.tsx`:
+- Título: "Método baseado em ciência, não em tendências"
+- Texto principal conforme PDR
+- Frase de impacto destacada: "Naturalidade não é acaso. É planejamento."
+- Seguir mesmo padrão visual das seções existentes (FadeIn, container-narrow, section-padding)
+- Inserir no `Index.tsx` entre AboutSection e ProceduresSection
+
+---
+
+## Detalhes Técnicos
+
+- **Arquivos modificados**: `siteConfig.ts`, `HeroSection.tsx`, `ProceduresSection.tsx`, `ResultsSection.tsx`, `FinalSection.tsx`, `FooterSection.tsx`, `Index.tsx`
+- **Arquivo criado**: `MethodSection.tsx`
+- **Nenhuma alteração** em: layout, CSS, imagens, cores, fontes ou componentes UI
 

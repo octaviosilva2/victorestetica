@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/luxerie');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,13 +8,13 @@
 @layer base {
   :root {
     /* Primary - Champagne Gold */
-    --primary: 36 45% 70%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 144 7% 46%;
+    --primary-foreground: 0 0% 100%;
     
     /* Backgrounds */
-    --background: 0 0% 100%;
+    --background: 0 0% 88%;
     --background-dark: 0 0% 6%;
-    --background-subtle: 30 10% 97%;
+    --background-subtle: 0 0% 92%;
     
     /* Foreground */
     --foreground: 0 0% 8%;
@@ -21,33 +22,33 @@
     --foreground-muted: 0 0% 45%;
     
     /* Card */
-    --card: 0 0% 100%;
+    --card: 0 0% 93%;
     --card-foreground: 0 0% 8%;
     
     /* Popover */
-    --popover: 0 0% 100%;
+    --popover: 0 0% 93%;
     --popover-foreground: 0 0% 8%;
     
     /* Secondary */
-    --secondary: 30 10% 95%;
+    --secondary: 0 0% 90%;
     --secondary-foreground: 0 0% 15%;
     
     /* Muted */
-    --muted: 30 10% 96%;
+    --muted: 0 0% 91%;
     --muted-foreground: 0 0% 45%;
     
     /* Accent */
-    --accent: 36 45% 70%;
-    --accent-foreground: 0 0% 5%;
+    --accent: 144 7% 46%;
+    --accent-foreground: 0 0% 100%;
     
     /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
     /* Border & Input */
-    --border: 30 15% 90%;
-    --input: 30 15% 90%;
-    --ring: 36 45% 70%;
+    --border: 0 0% 82%;
+    --input: 0 0% 82%;
+    --ring: 144 7% 46%;
     
     --radius: 0.5rem;
     
@@ -63,8 +64,8 @@
   }
 
   .dark {
-    --primary: 36 45% 70%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 144 7% 46%;
+    --primary-foreground: 0 0% 100%;
     --background: 0 0% 6%;
     --background-dark: 0 0% 4%;
     --background-subtle: 0 0% 10%;
@@ -79,11 +80,11 @@
     --secondary-foreground: 0 0% 95%;
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
-    --accent: 36 45% 70%;
-    --accent-foreground: 0 0% 5%;
+    --accent: 144 7% 46%;
+    --accent-foreground: 0 0% 100%;
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 36 45% 70%;
+    --ring: 144 7% 46%;
   }
 }
 
@@ -98,7 +99,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Luxerie', serif;
   }
 }
 
