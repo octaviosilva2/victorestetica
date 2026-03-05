@@ -10,7 +10,7 @@ const FooterSection = () => {
           <div className="grid md:grid-cols-2 gap-10 mb-10">
             {/* Left - Contact Info */}
             <div className="space-y-4">
-              <h3 className="font-serif text-xl text-foreground-light mb-2">
+              <h3 className="font-luxerie text-xl text-foreground-light mb-2">
                 {siteConfig.professional.name}
               </h3>
               <p className="text-primary text-sm tracking-wider">
