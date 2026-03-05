@@ -14,7 +14,7 @@ const FinalSection = () => {
       <div className="section-padding bg-background">
         <div className="container-narrow">
           <FadeIn className="text-center pt-4">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-5 leading-tight">
+            <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-foreground mb-5 leading-tight">
               {siteConfig.cta.finalTitle}
             </h2>
             <div className="w-14 h-px bg-primary/60 mx-auto mb-6" />
@@ -38,7 +38,7 @@ const FinalSection = () => {
         <div className="container-narrow">
           {/* Texto institucional — centralizado em todos os breakpoints */}
           <FadeInUp className="text-center max-w-[720px] mx-auto mb-10 lg:mb-12">
-            <p className="font-serif text-lg text-foreground font-medium">
+            <p className="font-playfair text-lg text-foreground font-medium">
               {siteConfig.contact.clinicName}
             </p>
             <div className="flex items-start justify-center gap-2 text-foreground-muted text-sm leading-relaxed mt-1.5">
