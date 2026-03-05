@@ -72,7 +72,7 @@ const ProceduresSection = () => {
       <div className="container-narrow">
         {/* Title */}
         <FadeIn className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
+          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
             Procedimentos
           </h2>
           <p className="text-foreground-muted max-w-xl mx-auto mb-6">

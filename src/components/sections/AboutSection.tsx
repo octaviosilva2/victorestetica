@@ -22,7 +22,7 @@ const AboutSection = () => {
 
           {/* Right Column - Content */}
           <FadeInUp delay={200} className="flex flex-col justify-center">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-2">
+            <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-foreground mb-2">
               {siteConfig.about.title}
             </h2>
 

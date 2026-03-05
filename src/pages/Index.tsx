@@ -6,10 +6,15 @@ import ResultsSection from "@/components/sections/ResultsSection";
 import FinalSection from "@/components/sections/FinalSection";
 import FooterSection from "@/components/sections/FooterSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import logoVictor from "@/assets/logo-victor.png";
 
 const Index = () => {
   return (
     <main className="overflow-x-hidden">
+      {/* Logo */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
+        <img src={logoVictor} alt="Dr. Victor Folster" className="h-10 sm:h-12 w-auto invert brightness-0 invert opacity-80" />
+      </div>
       <HeroSection />
       <AboutSection />
       <MethodSection />
