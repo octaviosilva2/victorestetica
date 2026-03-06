@@ -13,7 +13,7 @@ const Index = () => {
     <main className="overflow-x-hidden">
       {/* Logo */}
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
-        <img src={logoVictor} alt="Dr. Victor Folster" className="h-10 sm:h-12 w-auto invert brightness-0 invert opacity-80" />
+        <img src={logoVictor} alt="Dr. Victor Folster" className="h-8 sm:h-10 w-auto invert opacity-90" />
       </div>
       <HeroSection />
       <AboutSection />
