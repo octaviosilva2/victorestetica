@@ -24,7 +24,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 animate-fade-in-up max-w-[320px] sm:max-w-none mx-auto flex flex-col items-center">
         {/* Specialty Badge */}
-        <span className="inline-block text-primary text-[0.75rem] sm:text-sm md:text-base font-semibold tracking-[0.35em] sm:tracking-[0.4em] uppercase mb-8 sm:mb-6 md:mb-8 drop-shadow-lg">
+        <span className="inline-block text-primary text-[0.75rem] sm:text-sm md:text-base font-semibold tracking-[0.35em] sm:tracking-[0.4em] uppercase mb-8 sm:mb-6 md:mb-8 [text-shadow:_0_0_12px_hsl(var(--primary)/0.6),_0_0_24px_hsl(var(--primary)/0.3)]">
           {siteConfig.professional.specialty}
         </span>
 
