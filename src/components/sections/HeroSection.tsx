@@ -1,5 +1,6 @@
 import { siteConfig } from "@/lib/siteConfig";
 import { Button } from "@/components/ui/button";
+import clinicReception from "@/assets/clinic-reception-new.png";
 
 const HeroSection = () => {
   const handleWhatsApp = () => {
@@ -11,7 +12,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-no-repeat scale-105 bg-center max-sm:bg-[center_35%]"
         style={{ 
-          backgroundImage: `url(/FOTO_CLÍNICA.jpg)`,
+          backgroundImage: `url(${clinicReception})`,
           filter: 'blur(2px)'
         }}
       />
@@ -26,7 +27,7 @@ const HeroSection = () => {
           {siteConfig.professional.specialty}
         </span>
         {/* Name */}
-        <h1 className="font-luxerie text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-light mb-5 sm:mb-4 md:mb-6 leading-[1.1] sm:leading-[1.1] tracking-wide">
+        <h1 className="font-playfair text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-medium mb-5 sm:mb-4 md:mb-6 leading-[1.1] sm:leading-[1.1] tracking-tight">
           {siteConfig.professional.name}
         </h1>
         {/* Support Text */}
