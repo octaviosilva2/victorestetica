@@ -71,7 +71,7 @@ const FinalSection = () => {
 
               <div className="overflow-hidden rounded-2xl h-[180px] sm:h-[240px] lg:h-[380px]">
                 <img
-                  src="/FOTO_CLÍNICA.jpg"
+                  src="/FOTO_CLINICA.jpg"
                   alt="Clínica Dr. Victor Folster"
                   className="w-full h-full object-cover"
                 />
