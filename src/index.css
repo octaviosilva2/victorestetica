@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'Luxuria';
-  src: url('/Luxuria Light.otf') format('opentype');
-  font-weight: 300;
+  font-family: 'Luxerie';
+  src: url('/Luxerie.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
 }
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
@@ -108,7 +108,7 @@
   }
 
   .font-luxerie {
-    font-family: 'Luxuria', serif;
+    font-family: 'Luxerie', serif;
   }
 
   .font-playfair {
