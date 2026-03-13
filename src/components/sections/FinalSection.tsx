@@ -1,6 +1,6 @@
 import { siteConfig } from "@/lib/siteConfig";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, MapPin, Camera } from "lucide-react";
+import { MessageCircle, MapPin } from "lucide-react";
 import { FadeIn, FadeInUp } from "@/hooks/useScrollAnimation";
 
 const FinalSection = () => {
@@ -36,7 +36,6 @@ const FinalSection = () => {
       {/* BLOCO 2 — Institucional */}
       <div className="section-padding bg-background-subtle/60 pb-24 sm:pb-16">
         <div className="container-narrow">
-          {/* Texto institucional — centralizado em todos os breakpoints */}
           <FadeInUp className="text-center max-w-[720px] mx-auto mb-10 lg:mb-12">
             <p className="font-playfair text-lg text-foreground font-medium">
               {siteConfig.contact.clinicName}
@@ -53,11 +52,9 @@ const FinalSection = () => {
             </p>
           </FadeInUp>
 
-          {/* Mobile: stacked; Desktop: 2 cols simétricos */}
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
-            {/* Coluna esquerda — Endereço mobile + Imagem */}
+            {/* Coluna esquerda — Foto da clínica */}
             <FadeInUp delay={100}>
-              {/* Botão ver no mapa — mobile only, above image */}
               <div className="lg:hidden mb-4">
                 <Button
                   asChild
@@ -72,10 +69,12 @@ const FinalSection = () => {
                 </Button>
               </div>
 
-              {/* Imagem da clínica */}
-              <div className="overflow-hidden rounded-2xl h-[180px] sm:h-[240px] lg:h-[380px] bg-background border border-border/30 flex flex-col items-center justify-center">
-                <Camera className="w-8 h-8 text-foreground-muted/40 mb-2" />
-                <span className="text-foreground-muted/50 text-sm">Foto da clínica (em breve)</span>
+              <div className="overflow-hidden rounded-2xl h-[180px] sm:h-[240px] lg:h-[380px]">
+                <img
+                  src="/FOTO_CLÍNICA.jpg"
+                  alt="Clínica Dr. Victor Folster"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </FadeInUp>
 
@@ -95,7 +94,6 @@ const FinalSection = () => {
                     title="Localização da Clínica"
                   />
                 </div>
-                {/* Ver no mapa — desktop only, aligned left */}
                 <div className="hidden lg:block">
                   <Button
                     asChild
