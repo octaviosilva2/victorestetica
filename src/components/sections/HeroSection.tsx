@@ -1,19 +1,17 @@
 import { siteConfig } from "@/lib/siteConfig";
 import { Button } from "@/components/ui/button";
-import clinicReception from "@/assets/clinic-reception-new.png";
 
 const HeroSection = () => {
   const handleWhatsApp = () => {
     window.open(siteConfig.links.whatsappUrl, "_blank");
   };
-
   return (
     <section className="relative min-h-[92vh] sm:min-h-[600px] h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-no-repeat scale-105 bg-center max-sm:bg-[center_35%]"
         style={{ 
-          backgroundImage: `url(${clinicReception})`,
+          backgroundImage: `url(/FOTO_CLÍNICA.jpg)`,
           filter: 'blur(2px)'
         }}
       />
@@ -27,17 +25,14 @@ const HeroSection = () => {
         <span className="inline-block text-white/90 text-[0.75rem] sm:text-sm md:text-base font-semibold tracking-[0.35em] sm:tracking-[0.4em] uppercase mb-8 sm:mb-6 md:mb-8">
           {siteConfig.professional.specialty}
         </span>
-
         {/* Name */}
-        <h1 className="font-playfair text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-medium mb-5 sm:mb-4 md:mb-6 leading-[1.1] sm:leading-[1.1] tracking-tight">
+        <h1 className="font-luxerie text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-light mb-5 sm:mb-4 md:mb-6 leading-[1.1] sm:leading-[1.1] tracking-wide">
           {siteConfig.professional.name}
         </h1>
-
         {/* Support Text */}
         <p className="text-white/60 text-[0.875rem] sm:text-sm md:text-base max-w-[300px] sm:max-w-xl mx-auto mb-6 md:mb-8 leading-[1.55] sm:leading-relaxed">
           Protocolos personalizados que unem ciência, precisão e naturalidade para resultados elegantes e progressivos.
         </p>
-
         {/* CTA Button */}
         <Button
           onClick={handleWhatsApp}
@@ -50,5 +45,4 @@ const HeroSection = () => {
     </section>
   );
 };
-
 export default HeroSection;
