@@ -17,28 +17,28 @@ const HeroSection = () => {
         }}
       />
       
-      {/* Dark Overlay — stronger on mobile */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/[0.35] sm:bg-black/30" />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 animate-fade-in-up max-w-[320px] sm:max-w-none mx-auto flex flex-col items-center">
+      <div className="relative z-10 text-center px-4 animate-fade-in-up max-w-[90vw] sm:max-w-none mx-auto flex flex-col items-center">
         {/* Specialty Badge */}
-        <span className="inline-block text-white/90 text-[0.75rem] sm:text-sm md:text-base font-semibold tracking-[0.35em] sm:tracking-[0.4em] uppercase mb-8 sm:mb-6 md:mb-8">
+        <span className="inline-block text-white/90 text-[0.65rem] sm:text-sm md:text-base font-semibold tracking-[0.25em] sm:tracking-[0.4em] uppercase mb-5 sm:mb-6 md:mb-8">
           {siteConfig.professional.specialty}
         </span>
         {/* Name */}
-        <h1 className="font-luxerie text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-normal mb-5 sm:mb-4 md:mb-6 leading-[1.1] sm:leading-[1.1] tracking-widest">
+        <h1 className="font-luxerie text-[2rem] xs:text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-normal mb-4 sm:mb-4 md:mb-6 leading-[1.15] tracking-[0.12em] sm:tracking-widest whitespace-nowrap">
           {siteConfig.professional.name}
         </h1>
         {/* Support Text */}
-        <p className="text-white/60 text-[0.875rem] sm:text-sm md:text-base max-w-[300px] sm:max-w-xl mx-auto mb-6 md:mb-8 leading-[1.55] sm:leading-relaxed">
+        <p className="text-white/60 text-[0.8rem] sm:text-sm md:text-base max-w-[280px] sm:max-w-xl mx-auto mb-6 md:mb-8 leading-relaxed">
           Protocolos personalizados que unem ciência, precisão e naturalidade para resultados elegantes e progressivos.
         </p>
         {/* CTA Button */}
         <Button
           onClick={handleWhatsApp}
           size="lg"
-          className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full w-[min(320px,88%)] sm:w-auto px-12 md:px-16 py-6 sm:py-7 md:py-8 text-base md:text-lg font-medium tracking-wide transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/30"
+          className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full w-[min(300px,88%)] sm:w-auto px-10 md:px-16 py-5 sm:py-7 md:py-8 text-sm md:text-lg font-medium tracking-wide transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/30"
         >
           {siteConfig.cta.heroButton}
         </Button>
