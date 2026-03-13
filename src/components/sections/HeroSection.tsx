@@ -27,7 +27,7 @@ const HeroSection = () => {
           {siteConfig.professional.specialty}
         </span>
         {/* Name */}
-        <h1 className="font-playfair text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-medium mb-5 sm:mb-4 md:mb-6 leading-[1.1] sm:leading-[1.1] tracking-tight">
+        <h1 className="font-luxerie text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-normal mb-5 sm:mb-4 md:mb-6 leading-[1.1] sm:leading-[1.1] tracking-widest">
           {siteConfig.professional.name}
         </h1>
         {/* Support Text */}
