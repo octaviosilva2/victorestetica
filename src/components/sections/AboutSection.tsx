@@ -1,39 +1,37 @@
 import { siteConfig } from "@/lib/siteConfig";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ImageIcon } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { FadeIn, FadeInUp } from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
   const handleWhatsApp = () => {
     window.open(siteConfig.links.whatsappUrl, "_blank");
   };
-
   return (
     <section id="sobre" className="section-padding bg-background">
       <div className="container-narrow">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Left Column - Image Placeholder */}
+          {/* Left Column - Foto Profissional */}
           <FadeIn>
-            <div className="aspect-[3/4] overflow-hidden rounded-2xl bg-background-subtle border border-border/30 flex flex-col items-center justify-center">
-              <ImageIcon className="w-10 h-10 text-foreground-muted/40 mb-3" />
-              <span className="text-foreground-muted/50 text-sm">Imagem do profissional (em breve)</span>
+            <div className="aspect-[3/4] overflow-hidden rounded-2xl">
+              <img
+                src="/FOTO_PROFISSIONAL_VICTOR.jpg"
+                alt="Dr. Victor Folster"
+                className="w-full h-full object-cover"
+              />
             </div>
           </FadeIn>
-
           {/* Right Column - Content */}
           <FadeInUp delay={200} className="flex flex-col justify-center">
             <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-foreground mb-2">
               {siteConfig.about.title}
             </h2>
-
             <p className="text-primary text-sm tracking-wider mb-6">
               {siteConfig.professional.credentials}
             </p>
-
             <p className="text-foreground-muted text-lg leading-relaxed mb-8">
               Especialista em <strong>Farmácia Estética e Clínica</strong>, com sólida experiência na integração entre conhecimento científico e prática estética avançada, dedicado a potencializar a beleza natural de cada paciente por meio de protocolos personalizados, seguros e com resultados harmoniosos e realistas.
             </p>
-
             {/* Highlights */}
             <ul className="space-y-4 mb-10">
               {siteConfig.about.highlights.map((highlight, index) => (
@@ -43,7 +41,6 @@ const AboutSection = () => {
                 </li>
               ))}
             </ul>
-
             <Button
               onClick={handleWhatsApp}
               size="lg"
@@ -57,5 +54,4 @@ const AboutSection = () => {
     </section>
   );
 };
-
 export default AboutSection;
